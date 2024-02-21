@@ -1,0 +1,14 @@
+{% extends 'lab3/base.html' %}
+
+{% block title %}Статус{% endblock %}
+
+{% block content %}
+    <div class="home">
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+
+            <button type="submit">Set Status</button>
+        </form>
+    </div>
+{% endblock %}
